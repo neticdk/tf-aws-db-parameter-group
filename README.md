@@ -9,6 +9,8 @@ Terraform 0.12
 ```hcl
 module "db_parameter_group" {
   source  = "github.com/neticdk/tf-aws-db-parameter-group"
+  family  = "aurora-postgresql10"
+  name_prefix = "mydb"
 }
 ```
 
@@ -18,7 +20,7 @@ module "db_parameter_group" {
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:-----:|
 | description | The description of the DB parameter group. Defaults to "Managed by Terraform". | `string` | n/a | yes |
-| family | The family of the DB parameter group. | `string` | `"aurora-postgresql10"` | no |
+| family | The family of the DB parameter group. | `string` | n/a | yes |
 | name | The name of the DB parameter group. If omitted, Terraform will assign a random, unique name. | `string` | n/a | yes |
 | name\_prefix | Creates a unique name beginning with the specified prefix. Conflicts with name. | `string` | n/a | yes |
 | parameters | Network interface ID to associate with | `list(map(string))` | `[]` | no |

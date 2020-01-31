@@ -29,7 +29,6 @@ variable "use_name_prefix" {
 variable "family" {
   description = "The family of the DB parameter group."
   type        = string
-  default     = "aurora-postgresql10"
 }
 
 variable "description" {
