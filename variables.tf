@@ -38,7 +38,7 @@ variable "description" {
 }
 
 variable "parameters" {
-  description = "Network interface ID to associate with"
+  description = "A list of DB parameters (map) to apply"
   type        = list(map(string))
   default     = []
 }

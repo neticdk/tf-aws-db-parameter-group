@@ -23,7 +23,7 @@ module "db_parameter_group" {
 | family | The family of the DB parameter group. | `string` | n/a | yes |
 | name | The name of the DB parameter group. If omitted, Terraform will assign a random, unique name. | `string` | n/a | yes |
 | name\_prefix | Creates a unique name beginning with the specified prefix. Conflicts with name. | `string` | n/a | yes |
-| parameters | Network interface ID to associate with | `list(map(string))` | `[]` | no |
+| parameters | A list of DB parameters (map) to apply | `list(map(string))` | `[]` | no |
 | tags | A map of tags to add to all resources | `map` | `{}` | no |
 | use\_name\_prefix | Whether to use name\_prefix or not | `bool` | `true` | no |
 
